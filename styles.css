@@ -38,6 +38,11 @@ a:hover {
     text-underline-offset: 1rem;
 }
 
+.no-hover:hover{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
 .name {
     color: white;
     font-size: 2rem;
@@ -112,10 +117,11 @@ a:hover {
 }
 
 .details_1, .details_2 {
-    font-size: 16px;
+    font-size: 1.2rem;
     line-height: 1.5;
     width: 500px; 
     padding-left: 20px;
+    margin-top: 50px;
 }
 
 .details_2{
@@ -133,31 +139,71 @@ a:hover {
 
 .projects-container{
     text-align: center;
-
 }
 
-.project_1, .project_2, .project_3 {
+.project_1, .project_2, .project_3{
     border-color: black;
     border-width: 0.1rem;
     border-style: solid;
     border-radius: 15%;
-    width: 400px;
-    height: 400px;
+    width: 300px;
+    height: 300px;
     display: inline-block; 
     margin: 50px; 
-    background-color: rgb(0, 109, 128); 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
-    transition: transform 0.3s, box-shadow 0.3s; 
+    background-color: rgb(69, 8, 149); 
     overflow: hidden; 
     position: relative;
+    font-size: 1.5rem;
 }
 
-.project_1:hover, .project_2:hover, .project_3:hover {
-    transform: translateY(-10px); /* Slight lift on hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+.project_1:hover, .project_2:hover, .project_3:hover  {
+    transform: translateY(-10px); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
 }
 
-/* #experience{
+.project_1 p{
+    margin-top: 50%;
+}
+
+.project_2 p{
+    margin-top: 50%;
+}
+
+.project_3 p{
+    margin-top: 50%;
+}
+
+.project-description{
+    padding: 100px;
+    color: white;
+    width: 50%;
+    margin-left: 380px;
+}
+
+.project-description img{
+    margin-top: 20px;
+    width: 100%;
+}
+
+.project-description p{
+    margin-top: 20px;
+    font-size: 1.2rem;
+}
+
+.project-container:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+.closebtn {
+    float: right;
+    color: white;
+    font-size: 35px;
+    cursor: pointer;
+} 
+
+/* experience{
     margin-top: 400px;
     display: flex;
     justify-content: center;
@@ -172,6 +218,29 @@ a:hover {
     justify-content: center;
     flex-direction: column;
     align-items: center;
+}
+
+.contact-container{
+    text-align: center;
+}
+
+.contact_1, .contact_2, .contact_3 {
+    border-color: black;
+    border-width: 0.1rem;
+    border-style: solid;
+    border-radius: 2%;
+    width: 400px;
+    height: 100px;
+    display: inline-block; 
+    margin: 50px; 
+    background-color: rgb(69, 8, 149); 
+    overflow: hidden; 
+}
+
+.box_1, .box_2, .box_3{
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 40px;
 }
 
 @media (max-width: 768px) {

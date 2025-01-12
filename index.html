@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
 </head>
 <body>
     <nav id="navbar">
@@ -52,17 +53,43 @@
     <section id="projects">
         <p class="text_2">Projects</p>
         <div class="projects-container">
-            <div class="project_1">
-            
+            <div class="project_1" onclick="viewProject('p1');">
+                <p>Disk Analyzer</p>
             </div>
-            <div class="project_2">
-                
+            <div class="project_2" onclick="viewProject('p2');">
+                <p>Project 2</p>
             </div>
-            <div class="project_3">
-                
+            <div class="project_3" onclick="viewProject('p3');">
+                <p>Project 3</p>
             </div>
         </div>
     </section>
+
+    <div id="p1" class="project-description" style="display:none;background:rgb(0, 109, 128)">    
+        <span onclick="this.parentElement.style.display='none'" class="closebtn">x</span>
+        <h2>Disk Analyzer</h2>
+        <p>The main objective of this project was to create a visually appealing terminal user interface (TUI) that displays the important 
+            system information, similar to a basic version of a task manager to observe system performance, while maintaining simplicity.
+        </p>
+        <p>The following tool is a system tool, which monitors different aspects (i.e. CPU usage, disk space, network speed, etc).
+           This project was done in Python using the library 'Rich', which is a TUI that displayed the specifications seen below.
+        </p>
+        <img src="Images/disk-analyzer.png" alt="">
+        <p>The sections 'CPU Usage' and 'Network Speed' are updated in real-time. Moreover to get systems details, the 'psutil' library 
+            was used to display information for the sections 'Disk Space', 'CPU Info', 'System specifications' and'Other Specifications'.</p>
+    </div>
+
+    <div id="p2" class="project-description" style="display:none;background:rgb(0, 109, 128)">    
+        <span onclick="this.parentElement.style.display='none'" class="closebtn">x</span>
+        <h2>Project 2</h2>
+        <p>Lorem ipsum..</p>
+    </div>
+
+    <div id="p3" class="project-description" style="display:none;background:rgb(0, 109, 128)">    
+        <span onclick="this.parentElement.style.display='none'" class="closebtn">x</span>
+        <h2>Project 3</h2>
+        <p>Lorem ipsum..</p>
+    </div>
 
     <!-- <section id="experience">
         <p class="text_2">Experience</p>
@@ -70,6 +97,27 @@
 
     <section id="contact">
         <p class="text_2">Contact</p>
+        <div class="contacts-container">
+            <div class="contact_1">
+                <p class="box_1">
+                    ✉️
+                    <a href="mailto:reachakhil10@gmail.com" class="no-hover">reachakhil10@gmail.com</a>
+                </p>
+            </div>
+            <div class="contact_2">
+                <p class="box_2">
+                    🐙
+                    <a href="https://github.com/AkkuRam" class="no-hover">AkkuRam (Github)</a>
+                </p>
+                
+            </div>
+            <div class="contact_3">
+                <p class="box_3">
+                    🔗
+                    <a href="https://www.linkedin.com/in/akhilesh-ramesh" class="no-hover">Akhilesh Ramesh (LinkedIn)</a>
+                </p>
+            </div>
+        </div>
     </section> 
    
 </body>
