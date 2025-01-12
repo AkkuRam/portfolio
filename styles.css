@@ -137,21 +137,25 @@ a:hover {
     align-items: center;
 }
 
-.projects-container{
-    text-align: center;
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    gap: 30px; 
+    margin: 20px; 
+    text-align: center; 
 }
 
-.project_1, .project_2, .project_3{
+.project_1, .project_2, .project_3 {
     border-color: black;
     border-width: 0.1rem;
     border-style: solid;
     border-radius: 15%;
-    width: 300px;
+    width: 300px; 
     height: 300px;
-    display: inline-block; 
-    margin: 50px; 
-    background-color: rgb(69, 8, 149); 
-    overflow: hidden; 
+    margin: 10px; 
+    background-color: rgb(69, 8, 149);
+    overflow: hidden;
     position: relative;
     font-size: 1.5rem;
 }
@@ -220,21 +224,23 @@ a:hover {
     align-items: center;
 }
 
-.contact-container{
-    text-align: center;
+.contacts-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly; 
+    align-items: center; 
+    margin: 20px; 
 }
 
 .contact_1, .contact_2, .contact_3 {
     border-color: black;
     border-width: 0.1rem;
     border-style: solid;
-    border-radius: 2%;
-    width: 400px;
+    width: 50%; 
     height: 100px;
-    display: inline-block; 
-    margin: 50px; 
+    margin: 10px; 
     background-color: rgb(69, 8, 149); 
-    overflow: hidden; 
+    overflow: hidden;
 }
 
 .box_1, .box_2, .box_3{
