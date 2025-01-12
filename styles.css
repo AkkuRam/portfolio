@@ -107,9 +107,8 @@ a:hover {
 
 .image_container_2 img {
     margin-top: 50px;
-    width: 500px; 
-    height: 300px; 
-    /* border-radius: 10%; */
+    width: 60%; 
+    height: 40%; 
 }
 
 .details-container {
@@ -229,7 +228,6 @@ a:hover {
     flex-wrap: wrap;
     justify-content: space-evenly; 
     align-items: center; 
-    margin: 20px; 
 }
 
 .contact_1, .contact_2, .contact_3 {
@@ -251,28 +249,69 @@ a:hover {
 
 @media (max-width: 768px) {
 
-    #profile{
+    .image_container {
         display: flex;
-        justify-content: center;
-        height: 50vh;
+        flex-direction: column; 
+        align-items: center;    
+        justify-content: center;  
+        text-align: center;     
     }
-
-    nav {
-        flex-direction: column;
-        align-items: center;
-        height: auto;
-    }
-
-    .nav-links {
-        margin-top: 20px;
-        font-size: 1.5rem;
-    }
-
     
-    .image-container img{
-        height: 200px;
-        width: 200px;
-        margin-right: 50px; 
+    .image_container img {
+        height: auto;           
+        width: 70%;             
+        margin-bottom: 1rem; 
+    }
+    
+    .text-container {
+        text-align: center;    
+        width: 90%;            
+        margin: 0 auto;     
+        padding: 0; 
+    }
+    
+    .text_1 {
+        font-size: 1rem;
+        margin-top: 0.5rem;
+    }
+    
+    .text_2 {
+        font-size: 1.5rem;      
+        font-weight: bold;
+        margin-top: 1rem;
+    }
+    
+    .text_3 {
+        font-size: 1.25rem;
+        margin-top: 1rem;
+    }
+
+    .image_container_2 {
+        display: flex;
+        flex-direction: column; 
+        align-items: center;   
+    }
+    
+    .image_container_2 img {
+        width: 85%;          
+        height: auto;         
+        margin-top: 20px;
+        margin-bottom: 20px;  
+    }
+
+    .details_1, .details_2 {
+        width: 90%;        
+    }
+
+    .contact_1, .contact_2, .contact_3 {
+        border-color: black;
+        border-width: 0.1rem;
+        border-style: solid;
+        width: 70%; 
+        height: 100px;
+        margin: 10px; 
+        background-color: rgb(69, 8, 149); 
+        overflow: hidden;
     }
 
 }
