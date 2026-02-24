@@ -2,28 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:46057/</loc>
+    <loc>http://localhost:45543/portfolio/</loc>
     <lastmod>2026-02-10T10:00:00+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:46057/projects/plant/</loc>
+    <loc>http://localhost:45543/portfolio/projects/plant/</loc>
     <lastmod>2026-02-10T10:00:00+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:46057/projects/</loc>
+    <loc>http://localhost:45543/portfolio/projects/</loc>
     <lastmod>2026-02-10T10:00:00+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:46057/projects/spectroscopy/</loc>
+    <loc>http://localhost:45543/portfolio/projects/spectroscopy/</loc>
     <lastmod>2025-02-24T10:00:00+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:46057/projects/disk/</loc>
+    <loc>http://localhost:45543/portfolio/projects/disk/</loc>
     <lastmod>2024-10-20T10:00:00+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:46057/projects/ppttoimage/</loc>
+    <loc>http://localhost:45543/portfolio/projects/ppttoimage/</loc>
     <lastmod>2023-11-30T10:00:00+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:46057/about/</loc>
+    <loc>http://localhost:45543/portfolio/about/</loc>
   </url><url>
-    <loc>http://localhost:46057/categories/</loc>
+    <loc>http://localhost:45543/portfolio/categories/</loc>
   </url><url>
-    <loc>http://localhost:46057/tags/</loc>
+    <loc>http://localhost:45543/portfolio/tags/</loc>
   </url>
 </urlset>
