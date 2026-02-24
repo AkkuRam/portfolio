@@ -1,14 +1,25 @@
+/* Body font (modern + readable) */
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 
+/* Retro pixel font (cleaner than Press Start 2P) */
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap');
+
 body,
-h1, h2, h3, h4,
-.navigation-title,
-.navigation a,
 p, li, div {
   font-family: 'Quicksand', sans-serif !important;
   font-size: 20px;
 }
 
+/* Pixel headings + navigation */
+h1, h2, h3, h4,
+.navigation-title,
+.navigation a {
+  font-family: 'Silkscreen', sans-serif !important;
+  font-size: 18px; /* pixel fonts appear larger */
+  letter-spacing: 0.5px;
+}
+
+/* Date styling */
 .date {
   font-size: 20px;
 }

@@ -63,3 +63,8 @@ pagerSize = 10
     name = "Projects"
     url = "/projects/"
     weight = 3
+
+  [[menu.main]]
+    name = "Resume"
+    url = "/resume/"
+    weight = 3
