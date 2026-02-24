@@ -9,6 +9,7 @@ date: 2024-10-20T10:00:00+01:00
 
 ![Disk](/images/disk_analyzer.png)
 
+
 ## Overview
 
 This is a Python project, which is designed to replicate the "Performance" page of the Task Manager app. The library "Rich" was used for the terminal UI. The displayed statistics mainly utilizes the libraries (psutil, os & platform) displaying:
