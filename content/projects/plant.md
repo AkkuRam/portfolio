@@ -74,7 +74,7 @@ as seen in the batch results section below.
 - Here 500 images were used for training and test to save computational power
 - The batch size was 8 images, where in total there were 63 total batches
 
-![Disk](/images/leaf_detection.png)
+![Leaf](/images/leaf_detection.png)
 
 ## Running the file
 

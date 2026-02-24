@@ -3,13 +3,9 @@ languageCode = 'en-us'
 title = 'Akhilesh Ramesh'
 theme = 'coder'
 
-
 [caches]
   [caches.images]
     dir = ':cacheDir/images'
-
-[pagination]
-pagerSize = 10
 
 [markup]
   [markup.goldmark]
@@ -22,6 +18,9 @@ pagerSize = 10
         [markup.goldmark.extensions.passthrough.delimiters]
           block = [['$$','$$'], ['\\[','\\]']]
           inline = [['\\(','\\)']]
+
+[pagination]
+pagerSize = 10
 
 [params]
   author = "Akhilesh Ramesh"
