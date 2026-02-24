@@ -1,0 +1,47 @@
+baseURL = 'http://localhost:41737/'
+languageCode = 'en-us'
+title = 'Akhilesh Ramesh'
+theme = 'coder'
+
+[pagination]
+pagerSize = 10
+
+[params]
+  author = "Akhilesh Ramesh"
+  info = "Master's student at Maastricht University"
+  description = "Portfolio"
+  avatarURL = "images/photo.png"
+  colorScheme = "auto"
+  customCSS = ["css/custom.css"]
+  hideColorSchemeToggle = false
+  
+
+[[params.social]]
+  name = "Github"
+  icon = "fa fa-github"
+  weight = 1
+  url = "https://github.com/AkkuRam/"
+
+[[params.social]]
+  name = "LinkedIn"
+  icon = "fa fa-linkedin"
+  weight = 2
+  url = "https://linkedin.com/in/akhilesh-ramesh/"
+
+[[params.social]]
+  name = "Email"
+  icon = "fa fa-envelope"
+  weight = 2
+  url = "mailto:reachakhil10@email.com"
+
+[menu]
+
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 3
+
+  [[menu.main]]
+    name = "Projects"
+    url = "/projects/"
+    weight = 3
