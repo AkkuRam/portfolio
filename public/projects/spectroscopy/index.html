@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=34559&amp;path=livereload" data-no-instant defer></script>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=46057&amp;path=livereload" data-no-instant defer></script>
   <title>
   Spectroscopy-based plastic classfication · Akhilesh Ramesh
 </title>
@@ -13,19 +13,38 @@
 
 
 <meta name="author" content="Akhilesh Ramesh">
-<meta name="description" content="Portfolio">
+<meta name="description" content="
+   Spectroscopy Prediction
+
+
+  Dataset description
+  
+    
+    Link to heading
+  
+
+
+Size: 373 rows, 998 columns
+Range of signals: ~700nm to ~1000nm
+Numerical columns: &ldquo;spectrum_k&rdquo;, &ldquo;sample_raw_k&rdquo;, &ldquo;wr_raw_k&rdquo; are 331 columns each
+Categorical columns: Color &amp; Transparency
+Target variable: 1: PET, 2: HDPE, 3: PVC, 4: LDPE, 5: PP, 6: PS, 7: Other, 8: Unknown
+
+The column &ldquo;spectrum_k&rdquo; are the columns of interest for us, since it is obtained by (spectrum_k = sample_raw_k / wr_raw_k),
+essentially dividing the raw signal by the white reference. Hence our total columns are 331 &#43; 2 categorical columns to predict the target
+variable consisting of 7 different plastic types. We discarded the 8th plastic type, since it was unknown and it was only 10 samples.">
 <meta name="keywords" content="">
 
 
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Spectroscopy-based plastic classfication">
-  <meta name="twitter:description" content="Portfolio">
+  <meta name="twitter:description" content="Spectroscopy Prediction Dataset description Link to heading Size: 373 rows, 998 columns Range of signals: ~700nm to ~1000nm Numerical columns: “spectrum_k”, “sample_raw_k”, “wr_raw_k” are 331 columns each Categorical columns: Color &amp; Transparency Target variable: 1: PET, 2: HDPE, 3: PVC, 4: LDPE, 5: PP, 6: PS, 7: Other, 8: Unknown The column “spectrum_k” are the columns of interest for us, since it is obtained by (spectrum_k = sample_raw_k / wr_raw_k), essentially dividing the raw signal by the white reference. Hence our total columns are 331 &#43; 2 categorical columns to predict the target variable consisting of 7 different plastic types. We discarded the 8th plastic type, since it was unknown and it was only 10 samples.">
 
-<meta property="og:url" content="http://localhost:34559/projects/spectroscopy/">
+<meta property="og:url" content="http://localhost:46057/projects/spectroscopy/">
   <meta property="og:site_name" content="Akhilesh Ramesh">
   <meta property="og:title" content="Spectroscopy-based plastic classfication">
-  <meta property="og:description" content="Portfolio">
+  <meta property="og:description" content="Spectroscopy Prediction Dataset description Link to heading Size: 373 rows, 998 columns Range of signals: ~700nm to ~1000nm Numerical columns: “spectrum_k”, “sample_raw_k”, “wr_raw_k” are 331 columns each Categorical columns: Color &amp; Transparency Target variable: 1: PET, 2: HDPE, 3: PVC, 4: LDPE, 5: PP, 6: PS, 7: Other, 8: Unknown The column “spectrum_k” are the columns of interest for us, since it is obtained by (spectrum_k = sample_raw_k / wr_raw_k), essentially dividing the raw signal by the white reference. Hence our total columns are 331 &#43; 2 categorical columns to predict the target variable consisting of 7 different plastic types. We discarded the 8th plastic type, since it was unknown and it was only 10 samples.">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="projects">
@@ -35,7 +54,7 @@
 
 
 
-<link rel="canonical" href="http://localhost:34559/projects/spectroscopy/">
+<link rel="canonical" href="http://localhost:46057/projects/spectroscopy/">
 
 
 <link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
@@ -110,7 +129,7 @@
     <nav class="navigation">
   <section class="container">
     
-    <a class="navigation-title" href="http://localhost:34559/">
+    <a class="navigation-title" href="http://localhost:46057/">
       Akhilesh Ramesh
     </a>
     
@@ -144,17 +163,213 @@
   <article>
     <header>
       <h1 class="title">
-        <a class="title-link" href="http://localhost:34559/projects/spectroscopy/">
+        <a class="title-link" href="http://localhost:46057/projects/spectroscopy/">
           Spectroscopy-based plastic classfication
         </a>
       </h1>
     </header>
 
-    
+    <a href="https://github.com/AkkuRam/df-project">
+  <i class="fab fa-fw fa-github"></i> Spectroscopy Prediction
+</a>
+<h2 id="dataset-description">
+  Dataset description
+  <a class="heading-link" href="#dataset-description">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<ul>
+<li>Size: 373 rows, 998 columns</li>
+<li>Range of signals: ~700nm to ~1000nm</li>
+<li>Numerical columns: &ldquo;spectrum_k&rdquo;, &ldquo;sample_raw_k&rdquo;, &ldquo;wr_raw_k&rdquo; are 331 columns each</li>
+<li>Categorical columns: Color &amp; Transparency</li>
+<li>Target variable: 1: PET, 2: HDPE, 3: PVC, 4: LDPE, 5: PP, 6: PS, 7: Other, 8: Unknown</li>
+</ul>
+<p>The column &ldquo;spectrum_k&rdquo; are the columns of interest for us, since it is obtained by (spectrum_k = sample_raw_k / wr_raw_k),
+essentially dividing the raw signal by the white reference. Hence our total columns are 331 + 2 categorical columns to predict the target
+variable consisting of 7 different plastic types. We discarded the 8th plastic type, since it was unknown and it was only 10 samples.</p>
+<p>Contributions:</p>
+<ul>
+<li>Preprocessing: Oversampling -&gt; Baseline Correction -&gt; Normalization -&gt; Savitzy Golay</li>
+<li>High-level fusion: Bayesian Consensus</li>
+<li>Mid-level fusion: PCA + Models (XGBoost, AdaBoost, Multilayer Perceptron (MLP), Random Forest (RF))</li>
+</ul>
+<h2 id="preprocessing">
+  Preprocessing
+  <a class="heading-link" href="#preprocessing">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Oversampling was perfoming, this there was a class imbalance in the target variable. BorderlineSMOTE was used to balance
+the class imbalance. It uses the basic implementation of SMOTE and improves the problem, where the synthetic samples from
+SMOTE are too similar to the existing minority samples. Hence, BorderlineSMOTE generates new samples that are near the borderline between the minority and majority class majority classes. It is easier view a visualization from the imbalanced-learn docs, where the 3 different colors/classes are better oversampled with BorderlineSMOTE.</p>
+<p>Now with BorderlineSMOTE, the first image below represents the imbalanced classes, where the second image represents the oversampled classes.</p>
+<p align="center">
+  <img src="/images/class_imb.png" width="45%" />
+  <img src="/images/class_bal.png" width="45%" />
+</p>
+<p>These images represent the preprocessing steps of the signal. For 7 plastic types there are many samples, hence there are multiple signal lines. In addition, once the signals are preprocessed, if for each plastic type the samples are averaged, it should represent a distinct signal for each plastic type, which makes it identifiable which plastic type is which signal.</p>
+<p>Referring to the images below, the first image represents the signals after being oversampled. There is clear background noise, therefore baseline correction is applied to isolate the peaks and flatten out the noise by using a quadratic polynomial (image 2). Hereafter, normalization is applied to bring them in a standard scale (image 3). Then the final step is to apply a Savitzky-Golay filter, which mainly smoothens out the signal (image 4).</p>
+<p align="center">
+  <img src="/images/signal_1.png" width="45%" />
+  <img src="/images/signal_2.png" width="45%" />
+</p>
+<p align="center">
+  <img src="/images/signal_3.png" width="45%" />
+  <img src="/images/signal_4.png" width="45%" />
+</p>
+<h2 id="mid-level-fusion">
+  Mid-level fusion
+  <a class="heading-link" href="#mid-level-fusion">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<ul>
+<li>Extracting features using PCA + Categorical features</li>
+</ul>
+<p>From the previous preprocessing steps, now the data is ready to use for the models. PCA is applied to reduce the dimensionality, since we are dealing with ~300 columns, where the PCA plot of 2 components below depicts a reasonable separation of the 7 classes. Moreover, from literature a threshold of keeping 90% of the variance was used which selected top 5 components in our case. The elbow method was not used, since this chose &lt; 5 components, and the results (i.e. accuracy, precision, recall, f1score) were suboptimal.</p>
+<p align="center">
+  <img src="/images/pca.png" width="45%" />
+  <img src="/images/pca_thresholded.png" width="45%" />
+</p>
+<p>With the following selections for mid-level fusion, it lead to the following results for the below metrics. Overall, the best performing models in terms of accuracy was XGBoost (78%), but in terms of other metrics, but XGBoost and RF were stable.</p>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: right"></th>
+          <th style="text-align: left">Models</th>
+          <th style="text-align: right">Accuracy</th>
+          <th style="text-align: right">Precision</th>
+          <th style="text-align: right">Recall</th>
+          <th style="text-align: right">F1-score</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: right">0</td>
+          <td style="text-align: left">XGBoost</td>
+          <td style="text-align: right">0.78</td>
+          <td style="text-align: right">0.77</td>
+          <td style="text-align: right">0.77</td>
+          <td style="text-align: right">0.77</td>
+      </tr>
+      <tr>
+          <td style="text-align: right">1</td>
+          <td style="text-align: left">AdaBoost</td>
+          <td style="text-align: right">0.51</td>
+          <td style="text-align: right">0.55</td>
+          <td style="text-align: right">0.53</td>
+          <td style="text-align: right">0.49</td>
+      </tr>
+      <tr>
+          <td style="text-align: right">2</td>
+          <td style="text-align: left">MLP</td>
+          <td style="text-align: right">0.60</td>
+          <td style="text-align: right">0.53</td>
+          <td style="text-align: right">0.56</td>
+          <td style="text-align: right">0.53</td>
+      </tr>
+      <tr>
+          <td style="text-align: right">3</td>
+          <td style="text-align: left">RF</td>
+          <td style="text-align: right">0.71</td>
+          <td style="text-align: right">0.74</td>
+          <td style="text-align: right">0.73</td>
+          <td style="text-align: right">0.72</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="high-level-fusion">
+  High-level fusion
+  <a class="heading-link" href="#high-level-fusion">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Unlike mid-level fusion, high-level fusion focuses on combining the outputs of multiple models, there is no
+feature extraction in this stage. Hence, for high-level, all the preprocessing steps are used on the raw data, but without applying PCA. The formula for bayesian consensus is shown below.</p>
+$$
+p(h_g | e) = \frac{p(e | h_g) p(h_g)}{ \sum_g p(e | h_g) p(h_g)}
+$$<ul>
+<li>$p(e|h_g)$ is the likelihood estimate of the conditional probability that evidence e is observed
+given that hypothesis $h_g$ is true</li>
+<li>$p(h_g)$ is the prior probability that hypothesis $h_g$ is true</li>
+</ul>
+<p>Example:</p>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: right"></th>
+          <th style="text-align: left">Model C</th>
+          <th style="text-align: right">Predicted A</th>
+          <th style="text-align: right">Predicted B</th>
+          <th style="text-align: right">Likelihood A</th>
+          <th style="text-align: right">Likelihood B</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: right">0</td>
+          <td style="text-align: left">True A</td>
+          <td style="text-align: right">127</td>
+          <td style="text-align: right">19</td>
+          <td style="text-align: right">0.87</td>
+          <td style="text-align: right">0.13</td>
+      </tr>
+      <tr>
+          <td style="text-align: right">1</td>
+          <td style="text-align: left">True B</td>
+          <td style="text-align: right">12</td>
+          <td style="text-align: right">60</td>
+          <td style="text-align: right">0.17</td>
+          <td style="text-align: right">0.83</td>
+      </tr>
+  </tbody>
+</table>
+$$
+p(h_A|A) = \frac{0.87 \cdot 0.50}{0.17 \cdot 0.5 + 0.97 \cdot 0.5} = 0.84   
+$$$$
+p(h_B|A) = 1 - 0.84 = 0.16  
+$$<p>For the above example, our prior probabilities are represented by 0.5, as seen with our confusion matrices which is $2 \times 2$,
+as in Predicted vs True labels, where with the likelhood probabilities. We can compute this formula for some Model C, then these outputs (0.84, 0.16) are provided as input to the next model.</p>
+<p>The models used for combining the outputs are RF, Decision Tree, XGBoost, Logistic Regression, SVM, KNN. The main crux of bayesian consensus is that, in each iteration
+it gives out two probabilities, essentially for the label &ldquo;yes&rdquo; and &ldquo;no&rdquo;. Since for 1 vs Rest, this becomes binary, so after iterating  for each class, we get as the final output (two probabilites), where we choose the higher probability and this is accuracy  of predicting that class.</p>
+<p>Key Takeaway: The decision of the yes/no labels are chosen by us. As a result this is a bias, since the chosen labels can vary the results. The predicted labels will be given by the model and the actual/true label are defined by us.</p>
+<h2 id="future-work">
+  Future Work
+  <a class="heading-link" href="#future-work">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<ul>
+<li>Could have tried out many more fusion techniques to compare (i.e. Low-level, Federating learning), as well as  a few more within Mid/Low-level fusion</li>
+<li>Try another technique, which is averaging out all samples for each plastic type to create 7 distinct signals, then using cosine similarity to compare the true signal of each plastic type with our 7 distinct signals.</li>
+</ul>
+
   </article>
 </section>
 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css"
+    integrity="sha384-vKruj+a13U8yHIkAyGgK1J3ArTLzrFGBbBc0tDp4ad/EyewESeXE/Iv67Aj8gKZ0" crossorigin="anonymous">
   
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js"
+    integrity="sha384-PwRUT/YqbnEjkZO0zZxNqcxACrXe+j766U2amXcgMg5457rve2Y7I6ZJSm2A0mS4" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/contrib/auto-render.min.js"
+    integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"
+    onload="renderMathInElement(document.body,
+      {
+        delimiters: [
+          {left: '$$', right: '$$', display:true},
+          {left: '$', right: '$', display:false},
+          {left: '\\(', right: '\\)', display: false},
+          {left: '\\[', right: '\\]', display: true}
+        ]
+      }
+    );"></script>
 
     </div>
 

@@ -1,22 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
 
 body,
 h1, h2, h3, h4,
 .navigation-title,
 .navigation a,
 p, li, div {
-  font-family: 'VT323', monospace !important;
-  font-size: 25px;
+  font-family: 'Share Tech Mono', monospace !important;
+  font-size: 20px;
 }
 
 .date {
-  font-size: 25px;
-}
-
-pre {
-  font-size: 0.9rem;
-  background-color: #111;
-  padding: 1rem;
-  border-radius: 6px;
+  font-size: 20px;
 }
