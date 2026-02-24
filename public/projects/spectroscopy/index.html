@@ -57,14 +57,14 @@ variable consisting of 7 different plastic types. We discarded the 8th plastic t
 <link rel="canonical" href="http://localhost:1313/portfolio/projects/spectroscopy/">
 
 
-<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="http://localhost:1313/portfolio/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="http://localhost:1313/portfolio/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="http://localhost:1313/portfolio/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
 
 
   
   
-  <link rel="stylesheet" href="/portfolio/css/coder.css" media="screen">
+  <link rel="stylesheet" href="http://localhost:1313/portfolio/css/coder.css" media="screen">
 
 
 
@@ -74,7 +74,7 @@ variable consisting of 7 different plastic types. We discarded the 8th plastic t
   
     
     
-    <link rel="stylesheet" href="/portfolio/css/coder-dark.css" media="screen">
+    <link rel="stylesheet" href="http://localhost:1313/portfolio/css/coder-dark.css" media="screen">
   
 
 
@@ -82,22 +82,22 @@ variable consisting of 7 different plastic types. We discarded the 8th plastic t
  
   
     
-    <link rel="stylesheet" href="/portfolio/css/custom.css" media="screen">
+    <link rel="stylesheet" href="http://localhost:1313/portfolio/css/custom.css" media="screen">
   
 
 
 
 
 
-<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
-<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
-<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/svg+xml" href="http://localhost:1313/portfolio/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="http://localhost:1313/portfolio/images/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="http://localhost:1313/portfolio/images/favicon-16x16.png" sizes="16x16">
 
-<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/portfolio/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="http://localhost:1313/portfolio/images/apple-touch-icon.png">
 
-<link rel="manifest" href="/site.webmanifest">
-<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="manifest" href="http://localhost:1313/portfolio/site.webmanifest">
+<link rel="mask-icon" href="http://localhost:1313/portfolio/images/safari-pinned-tab.svg" color="#5bbad5">
 
 
 
@@ -142,11 +142,11 @@ variable consisting of 7 different plastic types. We discarded the 8th plastic t
         
           
             <li class="navigation-item">
-              <a class="navigation-link " href="/portfolio/about/">About</a>
+              <a class="navigation-link " href="http://localhost:1313/portfolio/about/">About</a>
             </li>
           
             <li class="navigation-item">
-              <a class="navigation-link " href="/portfolio/projects/">Projects</a>
+              <a class="navigation-link " href="http://localhost:1313/portfolio/projects/">Projects</a>
             </li>
           
         
@@ -207,18 +207,18 @@ the class imbalance. It uses the basic implementation of SMOTE and improves the 
 SMOTE are too similar to the existing minority samples. Hence, BorderlineSMOTE generates new samples that are near the borderline between the minority and majority class majority classes. It is easier view a visualization from the imbalanced-learn docs, where the 3 different colors/classes are better oversampled with BorderlineSMOTE.</p>
 <p>Now with BorderlineSMOTE, the first image below represents the imbalanced classes, where the second image represents the oversampled classes.</p>
 <p align="center">
-  <img src="/images/class_imb.png" width="45%" />
-  <img src="/images/class_bal.png" width="45%" />
+  <img src="http://localhost:1313/portfolio/images/class_imb.png" width="45%" />
+  <img src="http://localhost:1313/portfolio/images/class_bal.png" width="45%" />
 </p>
 <p>These images represent the preprocessing steps of the signal. For 7 plastic types there are many samples, hence there are multiple signal lines. In addition, once the signals are preprocessed, if for each plastic type the samples are averaged, it should represent a distinct signal for each plastic type, which makes it identifiable which plastic type is which signal.</p>
 <p>Referring to the images below, the first image represents the signals after being oversampled. There is clear background noise, therefore baseline correction is applied to isolate the peaks and flatten out the noise by using a quadratic polynomial (image 2). Hereafter, normalization is applied to bring them in a standard scale (image 3). Then the final step is to apply a Savitzky-Golay filter, which mainly smoothens out the signal (image 4).</p>
 <p align="center">
-  <img src="/images/signal_1.png" width="45%" />
-  <img src="/images/signal_2.png" width="45%" />
+  <img src="http://localhost:1313/portfolio/images/signal_1.png" width="45%" />
+  <img src="http://localhost:1313/portfolio/images/signal_2.png" width="45%" />
 </p>
 <p align="center">
-  <img src="/images/signal_3.png" width="45%" />
-  <img src="/images/signal_4.png" width="45%" />
+  <img src="http://localhost:1313/portfolio/images/signal_3.png" width="45%" />
+  <img src="http://localhost:1313/portfolio/images/signal_4.png" width="45%" />
 </p>
 <h2 id="mid-level-fusion">
   Mid-level fusion
@@ -232,8 +232,8 @@ SMOTE are too similar to the existing minority samples. Hence, BorderlineSMOTE g
 </ul>
 <p>From the previous preprocessing steps, now the data is ready to use for the models. PCA is applied to reduce the dimensionality, since we are dealing with ~300 columns, where the PCA plot of 2 components below depicts a reasonable separation of the 7 classes. Moreover, from literature a threshold of keeping 90% of the variance was used which selected top 5 components in our case. The elbow method was not used, since this chose &lt; 5 components, and the results (i.e. accuracy, precision, recall, f1score) were suboptimal.</p>
 <p align="center">
-  <img src="/images/pca.png" width="45%" />
-  <img src="/images/pca_thresholded.png" width="45%" />
+  <img src="http://localhost:1313/portfolio/images/pca.png" width="45%" />
+  <img src="http://localhost:1313/portfolio/images/pca_thresholded.png" width="45%" />
 </p>
 <p>With the following selections for mid-level fusion, it lead to the following results for the below metrics. Overall, the best performing models in terms of accuracy was XGBoost (78%), but in terms of other metrics, but XGBoost and RF were stable.</p>
 <table>
@@ -392,7 +392,7 @@ it gives out two probabilities, essentially for the label &ldquo;yes&rdquo; and 
 
   
   
-  <script src="/portfolio/js/coder.js"></script>
+  <script src="http://localhost:1313/portfolio/js/coder.js"></script>
   
 
   

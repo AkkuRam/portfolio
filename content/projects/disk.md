@@ -7,7 +7,7 @@ date: 2024-10-20T10:00:00+01:00
   <i class="fab fa-fw fa-github"></i> Disk Analyser
 </a>
 
-![Disk]({{ "images/disk_analyzer" | relURL }})
+![Disk]("/images/disk_analyzer.png")
 
 ## Overview
 

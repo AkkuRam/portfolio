@@ -2,6 +2,7 @@ baseURL = 'https://akkuram.github.io/portfolio/'
 languageCode = 'en-us'
 title = 'Akhilesh Ramesh'
 theme = 'coder'
+canonifyURLs = true
 
 [caches]
   [caches.images]
